@@ -1,0 +1,136 @@
+/* Serasan Digital — halaman login */
+:root{
+  --navy-950: #081A5C;
+  --navy-800: #10195E;
+  --ink: #10162B;
+  --ink-soft: #4B5271;
+  --paper: #FFFFFF;
+  --mist: #F2F5FB;
+  --line: #DCE3F2;
+  --blue-600: #0A6BE0;
+  --blue-500: #0A84FF;
+  --danger: #C62828;
+  --danger-bg: #FDECEC;
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+}
+
+*, *::before, *::after{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: radial-gradient(circle at 20% 0%, var(--navy-800), var(--navy-950) 70%);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.login{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  gap: 1.25rem;
+}
+
+.login__card{
+  width: 100%;
+  max-width: 400px;
+  background: var(--paper);
+  border-radius: 14px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 24px 60px rgba(0,0,0,.28);
+}
+
+.login__brand{
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1.75rem;
+}
+
+h1{
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  line-height: 1.15;
+  margin: 0 0 .4rem;
+}
+
+.login__lead{ margin: 0 0 1.5rem; color: var(--ink-soft); font-size: .95rem; }
+
+.login__form{ display: grid; gap: 1rem; }
+
+.field{ display: grid; gap: .35rem; }
+.field label{ font-weight: 600; font-size: .9rem; }
+
+.field input{
+  width: 100%;
+  font: inherit;
+  padding: .7rem .85rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--mist);
+  color: var(--ink);
+}
+.field input:focus{
+  outline: none;
+  border-color: var(--blue-500);
+  background: var(--paper);
+  box-shadow: 0 0 0 3px rgba(10,132,255,.2);
+}
+.field input[aria-invalid="true"]{ border-color: var(--danger); }
+
+.field__pw{ position: relative; }
+.field__pw input{ padding-right: 4.5rem; }
+.field__toggle{
+  position: absolute;
+  right: .4rem; top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--blue-600);
+  padding: .35rem .5rem;
+  cursor: pointer;
+}
+
+.check{ display: flex; align-items: center; gap: .5rem; font-size: .9rem; color: var(--ink-soft); }
+
+.login__msg{
+  margin: 0;
+  padding: .65rem .8rem;
+  border-radius: 8px;
+  font-size: .9rem;
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+.btn{
+  font: inherit;
+  font-weight: 600;
+  padding: .8rem 1rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--blue-500);
+  color: #fff;
+  cursor: pointer;
+  transition: background .15s;
+}
+.btn:hover{ background: var(--blue-600); }
+
+:focus-visible{ outline: 2.5px solid var(--blue-500); outline-offset: 3px; }
+
+.login__foot{ margin: 0; color: rgba(255,255,255,.65); font-size: .85rem; }
+
+@media (max-width: 420px){
+  .login__card{ padding: 1.75rem 1.25rem; }
+}
