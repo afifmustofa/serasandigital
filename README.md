@@ -39,3 +39,5 @@ Website company profile & portofolio untuk **Serasan Digital**. HTML, CSS, dan J
 ## Catatan: preview website di kartu Portofolio
 
 Kartu Fugui Construction, BMArtha Global, Bouqetwe Florist, Archapadma, Unibyte Solutions, dan Gudang Mebel menampilkan **live preview** lewat `<iframe>` yang di-scale kecil. Preview hanya muncul setelah file di-hosting (misalnya di GitHub Pages), dan hanya jika situs tujuan tidak memblokir embedding (header `X-Frame-Options` atau plugin keamanan seperti Wordfence). Kalau ada kartu yang tampil kosong, nonaktifkan opsi framing di situs itu, atau ganti `<iframe>` dengan `<img>` screenshot statis seperti kartu Konsulin, SIKENDALI, SISMENKEU, dan SILAPOR (gambar ada di `assets/img/`).
+
+Kartu sistem internal (SIKENDALI, SISMENKEU, SILAPOR) sengaja hanya menampilkan **halaman login**, bukan dashboard, supaya data internal klien tidak ikut terlihat publik.
